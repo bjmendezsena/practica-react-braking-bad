@@ -1,0 +1,96 @@
+.box2{
+    position: relative;
+    width: 250px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    background: #060c21;
+    transition:  0.5s;
+}
+
+.box2 .imgBx2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing:  border-box;
+    padding: 10px;
+    opacity: 0.1;
+    transition:  0.5s;
+}
+
+.box2:hover{
+    width: 400px;
+    height: 420px;
+    cursor: pointer;
+}
+
+.box2:hover .imgBx2{
+    opacity: 1;
+}
+
+.box2::before{
+    content:  '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: 0px;
+    background: #fff;
+    z-index: -1;
+}
+
+.box2::after{
+    content:  '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -2;
+    filter: blur(40px);
+}
+
+.box2::before,
+.box2::after{
+    background: linear-gradient(235deg, #89ff00, #010615, #00bcd4);
+}
+
+.box2::nth-child(2)before,
+.box2::nth-child(2)after{
+    background: linear-gradient(235deg, #ff005e, #010615, #fbff00);
+}
+
+.box2::nth-child(3)before,
+.box2::nth-child(3)after{
+    background: linear-gradient(235deg, #772aff, #010615, #2196F3);
+}
+
+.box2 .content2{
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    height: 90px;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.box2:hover .content2{
+    opacity: 1;
+}
+
+
+.box2:hover .content2 h2{
+    font-size: 20px;
+    color: #fff;
+    font-weight: 200;
+    letter-spacing: 2px;
+    width: min-content;
+}
